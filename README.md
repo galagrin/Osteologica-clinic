@@ -4,7 +4,7 @@
 
 ## Overview
 
-📝 This project showcases a dedicated webpage for reviews of the OsteoLogica Center and its healthcare professionals. It provides essential information about the doctors, contact details, and a convenient feedback submission form. To explore the full site, visit [OsteoLogica](https://osteologika.ru).
+📝 This project showcases a dedicated webpage for reviews of the OsteoLogica Center and its healthcare professionals. It provides essential information about the doctors, contact details, and a convenient feedback submission form. To explore the full site, visit [https://osteologika.ru](https://osteologika.ru).
 
 ## Key Features
 
