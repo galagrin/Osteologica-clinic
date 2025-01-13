@@ -62,26 +62,24 @@ html {
     color: $fontcolor;
 }
 body {
-    max-width: 1440px;
-    margin: 0 auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
-//
-// Header
-//
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
 
 header {
     max-height: 350px;
     height: 100%;
     background: rgb(212, 205, 185);
-    background: linear-gradient(
-        0deg,
-        rgba(212, 205, 185, 0.05569552039565828) 0%,
-        rgb(238, 236, 231) 100%
-    );
+    background: linear-gradient(0deg, rgba(212, 205, 185, 0.05569552039565828) 0%, rgb(238, 236, 231) 100%);
 
     .header_wrapper {
         padding: 46px 72px 16px 72px;
@@ -148,9 +146,6 @@ header {
     }
 }
 
-//
-//Бургер меню
-//
 .burger {
     display: none;
     position: relative;
@@ -184,7 +179,7 @@ header {
 .burger::after {
     bottom: 0;
 }
-// Добавляем класс active для анимации иконки бургера
+
 .burger.active span {
     transform: scale(0);
 }
@@ -199,10 +194,6 @@ header {
     transform: rotate(45deg) translate(0, 50%);
 }
 
-// Конец Бургер меню
-
-// Навигация
-//
 .header_menu {
     margin-top: 16px;
     .header__menu-item {
@@ -225,9 +216,7 @@ header {
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     }
 }
-// ПодМеню
 
-//   Телефонные номера
 .phone-button {
     @extend %button;
     display: none;
@@ -239,15 +228,10 @@ header {
     border: 1px solid $thirdcolor;
 }
 
-// Кнопка верся для слабовидящих
 #specialButton {
     margin-left: 1rem;
     width: 2rem;
 }
-
-//
-// Footer
-//
 
 footer {
     background-color: $thirdcolor;
@@ -340,9 +324,6 @@ footer {
     }
 }
 
-//
-//Back-to-top BTN
-//
 #back-to-top {
     position: fixed;
     bottom: 20px;
@@ -360,8 +341,6 @@ footer {
     z-index: 1000;
 }
 
-// Feedback Page
-//
 .feedback_wrapper {
     padding: 50px 100px 50px 100px;
     p {
@@ -449,7 +428,7 @@ footer {
 
 .review {
     flex: 1;
-    min-width: 300px; /* Минимальная ширина контейнера */
+    min-width: 300px;
     margin: 20px 0;
     padding: 20px 10px;
     box-shadow: 0 4px 8px #4366027c;
@@ -460,8 +439,6 @@ footer {
 .review_text {
     margin-top: 1.5rem;
 }
-
-// Feedback form
 
 .feedbackform {
     max-width: 550px;
@@ -479,8 +456,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fffefeb3 url(../assets/images/loader.gif) center/ 50px
-        no-repeat;
+    background: #fffefeb3 url(../assets/images/loader.gif) center/ 50px no-repeat;
     opacity: 0;
     visibility: hidden;
 }
@@ -568,7 +544,7 @@ textarea.form_input {
 //
 //Медиа запросы
 //
-/* При разрешении экрана 1380px и ниже */
+
 @media (max-width: 1380px) {
     .header_menu {
         .header__menu-item {
@@ -577,15 +553,12 @@ textarea.form_input {
         }
     }
 }
-/* При разрешении экрана 1300px и ниже */
 
 @media (max-width: 1300px) {
     .contact_wrap .contact_phone {
         font-size: 20px;
     }
 }
-
-/* При разрешении экрана 1150px и ниже */
 
 @media (max-width: 1150px) {
     header .header_wrapper {
@@ -604,7 +577,6 @@ textarea.form_input {
     }
 }
 
-/* При разрешении экрана 1030px и ниже */
 @media (max-width: 1030px) {
     header .contact_wrap .contact_phonewrap {
         flex-direction: column;
@@ -615,7 +587,6 @@ textarea.form_input {
     }
 }
 
-/* При разрешении экрана 990px и ниже */
 @media (max-width: 990px) {
     header .logo-wrapp div {
         font-size: 34px;
@@ -640,7 +611,6 @@ textarea.form_input {
     }
 }
 
-/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
 @media (max-width: 900px) {
     .burger {
         display: flex;
@@ -678,7 +648,7 @@ textarea.form_input {
 }
 .nav.open {
     display: flex;
-    margin: 0 auto; /* Отображается, когда класс open добавлен */
+    margin: 0 auto;
 }
 @keyframes burgerAnimation {
     from {
@@ -688,8 +658,6 @@ textarea.form_input {
         opacity: 1;
     }
 }
-
-/* При разрешении экрана 800px и ниже */
 
 @media (max-width: 800px) {
     header .header-container {
@@ -707,7 +675,6 @@ textarea.form_input {
     }
 }
 
-/* При разрешении экрана 640px и ниже */
 @media (max-width: 640px) {
     footer .footer_maininfo {
         flex-direction: column;
@@ -747,7 +714,6 @@ textarea.form_input {
     }
 }
 
-/* При разрешении экрана 485px и ниже */
 @media (max-width: 485px) {
     header .header_wrapper {
         padding-top: 16px;
@@ -801,8 +767,6 @@ textarea.form_input {
     }
 }
 
-/* При разрешении экрана 380px и ниже */
-
 @media (max-width: 380px) {
     .feedback h1 {
         margin-left: 30px;
@@ -812,8 +776,6 @@ textarea.form_input {
         min-width: 250px;
     }
 }
-
-/* При разрешении экрана 360px и ниже */
 
 @media (max-width: 360px) {
     footer .logo-wrapp div {
